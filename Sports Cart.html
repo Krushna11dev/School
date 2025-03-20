@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>Shopping cart</title>
+</head>
+<body>
+ <style> 
+body { 
+font-family: Arial, sans-serif; 
+text-align: center; 
+background-color: aliceblue; 
+} 
+h1 { 
+color: blue; 
+} 
+.item { 
+background-color: #ffa07a; 
+border: 2px solid #333; 
+padding: 10px; 
+margin: 10px; 
+display: inline-block; 
+} 
+.cart { 
+margin-top: 20px; 
+padding: 10px; 
+background-color: #aaf0d1; 
+display: inline-block; 
+border-radius: 10px; 
+} 
+</style> 
+</head> 
+<body> 
+ 
+<h1>Welcome to Sports Shop!</h1> 
+<p>Click the button to add an item to the cart.</p> 
+<div class="item"> 
+  <p>
+ 🏀Basketball - ₹600</p> 
+<button onclick="addToCart('Basketball')">Add to Cart</button> 
+</div> 
+   
+
+
+<div class="item"> 
+   <p>
+ ⚽︎ Football - ₹600</p> 
+<button onclick="addToCart('Football')">Add to Cart</button> 
+</div>
+
+
+ 
+<div class="item">
+  <p>
+  🏈 Rugby Ball- ₹600</p> 
+<button onclick="addToCart('Rugby Ball')">Add to Cart</button> 
+</div> 
+
+
+<div class="item">
+  <p>
+ 🏏Bat & Ball- ₹1500</p> 
+<button onclick="addToCart('Bat & Ball')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+ ⚾Baseball - ₹280</p> 
+<button onclick="addToCart('Baseball')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+ 🎾Tennis Racket - ₹1200</p> 
+<button onclick="addToCart('Tennis Racket')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+🏐Volleyball  - ₹300</p> 
+<button onclick="addToCart('Volleyball')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+  🏁Flag- ₹200</p> 
+<button onclick="addToCart('Flag')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+ 👟Running Shoes - ₹2500</p> 
+<button onclick="addToCart('Running Shoes')">Add to Cart</button> 
+</div>
+
+
+
+
+<div class="item">
+  <p>
+ ⛹ Basketball Kit- ₹2000</p> 
+<button onclick="addToCart('Basketball kit')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+ 🏃🏻‍♂️‍➡️Running Kit - ₹</p> 
+<button onclick="addToCart('Running Kit')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+ 🥊Boxing Gloves - ₹750</p> 
+<button onclick="addToCart('Boxing Gloves')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+ 🏅Medal - ₹45</p> 
+<button onclick="addToCart('Medal')">Add to Cart</button> 
+</div>
+
+
+
+<div class="item">
+  <p>
+🏆Trophy - ₹650</p> 
+<button onclick="addToCart('Trophy')">Add to Cart</button> 
+</div>
+
+
+<div class="cart"> 
+<h3>Shopping Cart</h3> 
+<p id="cartList">Cart is empty</p> 
+</div>  
+<script> 
+function addToCart(item) { 
+let cart = document.getElementById("cartList"); 
+if (cart.innerHTML === "Cart is empty") { 
+cart.innerHTML = item; 
+} else { 
+cart.innerHTML += ", " + item; 
+} 
+} 
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
