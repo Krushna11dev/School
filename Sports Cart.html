@@ -35,7 +35,7 @@ border-radius: 10px;
 <div class="item"> 
   <p>
  🏀Basketball - ₹600</p> 
-<button onclick="addToCart('Basketball')">Add to Cart</button> 
+<button onclick="addToCart('Basketball',600)">Add to Cart</button> 
 </div> 
    
 
@@ -43,7 +43,7 @@ border-radius: 10px;
 <div class="item"> 
    <p>
  ⚽︎ Football - ₹600</p> 
-<button onclick="addToCart('Football')">Add to Cart</button> 
+<button onclick="addToCart('Football',600)">Add to Cart</button> 
 </div>
 
 
@@ -51,14 +51,14 @@ border-radius: 10px;
 <div class="item">
   <p>
   🏈 Rugby Ball- ₹600</p> 
-<button onclick="addToCart('Rugby Ball')">Add to Cart</button> 
+<button onclick="addToCart('Rugby Ball',600)">Add to Cart</button> 
 </div> 
 
 
 <div class="item">
   <p>
  🏏Bat & Ball- ₹1500</p> 
-<button onclick="addToCart('Bat & Ball')">Add to Cart</button> 
+<button onclick="addToCart('Bat & Ball',1500)">Add to Cart</button> 
 </div>
 
 
@@ -66,7 +66,7 @@ border-radius: 10px;
 <div class="item">
   <p>
  ⚾Baseball - ₹280</p> 
-<button onclick="addToCart('Baseball')">Add to Cart</button> 
+<button onclick="addToCart('Baseball',280)">Add to Cart</button> 
 </div>
 
 
@@ -74,7 +74,7 @@ border-radius: 10px;
 <div class="item">
   <p>
  🎾Tennis Racket - ₹1200</p> 
-<button onclick="addToCart('Tennis Racket')">Add to Cart</button> 
+<button onclick="addToCart('Tennis Racket',1200)">Add to Cart</button> 
 </div>
 
 
@@ -82,7 +82,7 @@ border-radius: 10px;
 <div class="item">
   <p>
 🏐Volleyball  - ₹300</p> 
-<button onclick="addToCart('Volleyball')">Add to Cart</button> 
+<button onclick="addToCart('Volleyball',300)">Add to Cart</button> 
 </div>
 
 
@@ -90,7 +90,7 @@ border-radius: 10px;
 <div class="item">
   <p>
   🏁Flag- ₹200</p> 
-<button onclick="addToCart('Flag')">Add to Cart</button> 
+<button onclick="addToCart('Flag',200)">Add to Cart</button> 
 </div>
 
 
@@ -98,7 +98,7 @@ border-radius: 10px;
 <div class="item">
   <p>
  👟Running Shoes - ₹2500</p> 
-<button onclick="addToCart('Running Shoes')">Add to Cart</button> 
+<button onclick="addToCart('Running Shoes',2500)">Add to Cart</button> 
 </div>
 
 
@@ -107,15 +107,15 @@ border-radius: 10px;
 <div class="item">
   <p>
  ⛹ Basketball Kit- ₹2000</p> 
-<button onclick="addToCart('Basketball kit')">Add to Cart</button> 
+<button onclick="addToCart('Basketball kit',2000)">Add to Cart</button> 
 </div>
 
 
 
 <div class="item">
   <p>
- 🏃🏻‍♂️‍➡️Running Kit - ₹</p> 
-<button onclick="addToCart('Running Kit')">Add to Cart</button> 
+ 🏃🏻‍♂️‍➡️Running Kit - ₹1750</p> 
+<button onclick="addToCart('Running Kit',1750 )">Add to Cart</button> 
 </div>
 
 
@@ -123,7 +123,7 @@ border-radius: 10px;
 <div class="item">
   <p>
  🥊Boxing Gloves - ₹750</p> 
-<button onclick="addToCart('Boxing Gloves')">Add to Cart</button> 
+<button onclick="addToCart('Boxing Gloves',750)">Add to Cart</button> 
 </div>
 
 
@@ -131,7 +131,7 @@ border-radius: 10px;
 <div class="item">
   <p>
  🏅Medal - ₹45</p> 
-<button onclick="addToCart('Medal')">Add to Cart</button> 
+<button onclick="addToCart('Medal',45)">Add to Cart</button> 
 </div>
 
 
@@ -139,23 +139,32 @@ border-radius: 10px;
 <div class="item">
   <p>
 🏆Trophy - ₹650</p> 
-<button onclick="addToCart('Trophy')">Add to Cart</button> 
+<button onclick="addToCart('Trophy',650)">Add to Cart</button> 
+</div>
+<br>
+
+
+<div class="cart">
+<h3>Shopping Cart</h3>
+<p id="cartList">Cart is empty</p>
+<h3>Total: ₹<span id="totalAmount">0</span></h3>
 </div>
 
-
-<div class="cart"> 
-<h3>Shopping Cart</h3> 
-<p id="cartList">Cart is empty</p> 
-</div>  
-<script> 
-function addToCart(item) { 
-let cart = document.getElementById("cartList"); 
-if (cart.innerHTML === "Cart is empty") { 
-cart.innerHTML = item; 
-} else { 
-cart.innerHTML += ", " + item; 
-} 
-} 
+<script>
+let totalAmount = 0;
+function addToCart(item, price) {
+let cart = document.getElementById("cartList");
+let total = document.getElementById("totalAmount");
+// Update cart items
+if (cart.innerHTML === "Cart is empty") {
+cart.innerHTML = item;
+ } else {
+cart.innerHTML += ", " + item;
+}
+// Update total amount
+totalAmount += price;
+total.innerHTML = totalAmount;
+}
 </script>
 </body>
 </html>
